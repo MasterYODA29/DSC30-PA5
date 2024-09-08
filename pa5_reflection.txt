@@ -1,0 +1,40 @@
+Name: Michael Ren
+PID: A16430317
+Date: 9/7/24
+
+1. (1pt) Approximately how long did you spend on this PA?
+   A long time. 
+
+2. (3pt) d-ary heaps are typically more efficient and useful than binary heaps. However, there’s not really such a thing as a d-ary search tree (as opposed to a binary search tree). Why might this be the case? What is a drawback of implementing a d-ary search tree, instead of a BST?
+   
+   I think it's mostly because we're used to the law of the excluded type of logic, and in real
+   life it's easier to compare things by saying if we want them to meet a cutoff or not. In
+   addition, I believe that the search time/comparison time becomes longer the more children a
+   node has. That and there aren't any balancing algorithms like AVL or red black trees that I   
+   know of for d-ary trees. 
+
+3. (4pt) Compare and contrast the implementation of the MyPriorityQueue in this PA with the implementation of the CharQueue in PA 3. What is similar about the two data structures? What is different? Give specific details about your code, rather than conceptual similarities and differences.
+
+	There are several differences like the fact that CharQueue utilizes a circular array 
+	based on a queue like method of enqueuing and dequeuing elements, where there's a head 
+	and a tail. The insertion and removal are also unique, in that the tail is updated when 
+	insertion method is called, and the head is updated when remove is called. 
+	On the other hand, for mypriorityqueue,since it's based on a d-ary heap
+	order is maintained when add or remove is called via bubbleup/bubbledown. 
+	And d-ary heap methods are based on stack methods, which can be seen through the use 
+	of recursion in remove and add. 
+	For similarities I'd say besides methods like peek or isEmpty, there's not a whole lot of 
+	similarities. Both are data structures. But one has regard to order, and the other does 
+	not. 
+    
+
+4. (2pt) Did the accuracy for your KNN algorithm increase or decrease when you increased the number of images (NUM_TEST)? Why do you think that might be?
+    To be honest, I'm partially confused myself(and tired) as my algorithm for bubbleup and bubbledown for add and remove seem to work for up to 10 elements, and in conjunction with each other. But when I was trying to run it for longer length elements, it seemed to start failing, but I couldn't quite detect the error(if any) in the logic. And as a result my predictions for
+KNN were always off from the digit I drew. 
+
+    Actually scratch that, I found out the problem, my comparison was wrong, it was doing a
+    reverse comparison(max heap), which is why the accuracy was always 0.0 in the beginning
+    after changing that it improved. Seemed like the larger the test images the worse the 
+    accuracy. Statistically speaking, the more images you want to predict, given that the model 
+    has some error, it would seem reasonable that there would be a larger number of incorrect
+    predictions thus lowering the accuracy. 
