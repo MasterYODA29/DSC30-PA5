@@ -55,8 +55,6 @@ public class Worksheet {
         /*
         TODO: store heap's array status after multiples operations - operation i will be stored at index i-1
          */
-        //Why is the homework so pointlessly long? What's the point of adding in all these extra
-        //worksheets as if students didn't have a life of their own? 
         int[][] output = new int[5][12];
         output[0]=new int[]{71, 70, 55, 59, 65, 36, 37, 26, 35, 0, 0, 0};
         output[1]=new int[]{100, 70, 55, 71, 65, 36, 37, 26, 35, 15, 59, 0};
